@@ -1,8 +1,10 @@
 <template lang="html">
-    <div class="photo-element">
-        <img :src="src" :alt="alt" @click="onImgClick">
-        <button type="button" @click="onBtnClick">{{ btnText }}</button>
-    </div>
+  <div class="photo-element">
+    <img :src="src" :alt="alt" @click="onImgClick">
+    <button type="button" @click="onBtnClick">
+      {{ btnText }}
+    </button>
+  </div>
 </template>
 
 <script>

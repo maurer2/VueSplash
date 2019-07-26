@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.2"
   },
@@ -24,18 +26,41 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "jest": true
     },
     "globals": {
       "axios": false
     },
     "extends": [
+      "airbnb-base",
       "plugin:vue/essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off",
+      "vue/attributes-order": "off",
+      "vue/max-attributes-per-line": [
+        "errorv",
+        {
+          "singleline": "3",
+          "multiline": {
+            "max": "1",
+            "allowFirstLine": "false"
+          }
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"]
+        }
+      }
     }
   },
   "postcss": {

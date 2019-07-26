@@ -1,8 +1,8 @@
 <template lang="html">
-    <div class="home-view">
-        <h1>Home</h1>
-        <PhotoList :photos="photos"></PhotoList>
-    </div>
+  <div class="home-view">
+    <h1>Home</h1>
+    <PhotoList :photos="photos" />
+  </div>
 </template>
 
 <script>

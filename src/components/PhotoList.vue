@@ -1,7 +1,7 @@
 <template lang="html">
-    <div class="photo-list">
-        <PhotoElement v-for="photo in photos" :key="photo.id" :photo="photo"></PhotoElement>
-    </div>
+  <div class="photo-list">
+    <PhotoElement v-for="photo in photos" :key="photo.id" :photo="photo" />
+  </div>
 </template>
 
 <script>

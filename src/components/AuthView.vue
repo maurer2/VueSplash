@@ -1,12 +1,18 @@
 <template lang="html">
-    <div class="auth-view">
-        <form action="#" @submit.prevent="onSubmit">
-            <label for="client_id">Client ID:</label>
-            <input type="text" id="client_id" v-model="client_id">
-            <button type="submit">submit</button>
-            <button type="reset">reset</button>
-        </form>
-    </div>
+  <div class="auth-view">
+    <form action="#" @submit.prevent="onSubmit">
+      <label for="client_id">
+        Client ID:
+      </label>
+      <input type="text" id="client_id" v-model="client_id">
+      <button type="submit">
+        submit
+      </button>
+      <button type="reset">
+        reset
+      </button>
+    </form>
+  </div>
 </template>
 
 <script>

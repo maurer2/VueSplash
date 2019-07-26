@@ -1,8 +1,8 @@
 <template lang="html">
-    <div class="home-view">
-        <UserCard v-if="photo.user.username" :username="photo.user.username"></UserCard>
-        <PhotoElement :photo="photo"></PhotoElement>
-    </div>
+  <div class="home-view">
+    <UserCard v-if="photo.user.username" :username="photo.user.username" />
+    <PhotoElement :photo="photo" />
+  </div>
 </template>
 
 <script>

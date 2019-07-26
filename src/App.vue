@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-    </div>
+  <div id="app">
+    <RouterView />
+  </div>
 </template>
 
 <script>
     export default {
-        name: 'app',
+        name: 'App',
 
         mounted() {
             if (!this.$root.client_id) {

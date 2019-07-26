@@ -1,9 +1,9 @@
 <template lang="html">
-    <div class="user-card">
-        <img :src="src" :alt="alt" @click="onImgClick">
-        <h3>{{ user.name }}</h3>
-        <p>{{ user.bio }}</p>
-    </div>
+  <div class="user-card">
+    <img :src="src" :alt="alt" @click="onImgClick">
+    <h3>{{ user.name }}</h3>
+    <p>{{ user.bio }}</p>
+  </div>
 </template>
 
 <script>

@@ -1,8 +1,8 @@
 <template lang="html">
-    <div class="home-view">
-        <UserCard :username="$route.params.username"></UserCard>
-        <PhotoList :photos="photos"></PhotoList>
-    </div>
+  <div class="home-view">
+    <UserCard :username="$route.params.username" />
+    <PhotoList :photos="photos" />
+  </div>
 </template>
 
 <script>
