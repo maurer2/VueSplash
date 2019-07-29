@@ -1,8 +1,19 @@
 <template lang="html">
   <div class="search-view">
     <h1>Search</h1>
+    <nav>
+      <RouterLink to="/">
+        Home
+      </RouterLink>
+      <RouterLink to="/search">
+        Search
+      </RouterLink>
+      <RouterLink to="/favourites">
+        Favourites
+      </RouterLink>
+    </nav>
     <form class="form" @submit.prevent="handleSubmit">
-      <label class="label" for="field">
+      <label class="label" for="search">
         Search
       </label>
       <input class="field" type="search" id="search" name="search" v-model="inputValue">

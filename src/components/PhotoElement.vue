@@ -2,7 +2,8 @@
   <div class="photo-element" :class="{ 'photo-element--is-favourite': isFavourite }">
     <img :src="src" :alt="alt" @click="onImgClick">
     <button type="button" @click="onBtnClick">
-      {{ isFavourite ? 'unlike' : 'like' }} &#9733;
+      <span class="icon">&#9733;</span>
+      <span class="text"> {{ isFavourite ? 'unlike' : 'like' }}</span>
     </button>
   </div>
 </template>
