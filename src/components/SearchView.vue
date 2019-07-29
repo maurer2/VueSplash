@@ -1,17 +1,6 @@
 <template lang="html">
   <div class="search-view">
     <h1>Search</h1>
-    <nav>
-      <RouterLink to="/">
-        Home
-      </RouterLink>
-      <RouterLink to="/search">
-        Search
-      </RouterLink>
-      <RouterLink to="/favourites">
-        Favourites
-      </RouterLink>
-    </nav>
     <form class="form" @submit.prevent="handleSubmit">
       <label class="label" for="search">
         Search
