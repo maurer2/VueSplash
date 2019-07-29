@@ -56,3 +56,30 @@
         },
     }
 </script>
+
+<style lang="css" scoped>
+    .form {
+        display: flex;
+        margin: 0 auto 2rem auto;
+        flex-direction: column;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .label {
+      text-align: left;
+    }
+
+    .field {
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+    }
+
+    .button {
+      padding: 0.5rem 1rem;
+      align-self: flex-start;
+      background: whitesmoke;
+      appearance: none;
+    }
+
+</style>

@@ -34,9 +34,11 @@
         flex-basis: 0;
         font-weight: bold;
         text-decoration: none;
+        color: black;
     }
     
     .nav-link--is-active {
         background: #c3c3c3;
+        color: black;
     }
 </style>
