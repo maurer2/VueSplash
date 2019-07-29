@@ -10,19 +10,23 @@
         Submit
       </button>
     </form>
+    <PhotoList :photos="photos" />
   </div>
 </template>
 
 <script>
     import axios from 'axios';
+    import PhotoList from './PhotoList';
 
     export default {
         name: 'SearchView',
-        components: {},
+        components: {
+          PhotoList,
+        },
         data() {
             return {
-              inputValue: '',
-              photos: []
+              inputValue: 'cat',
+              photos: [],
             }
         },
         watch: {
@@ -34,15 +38,20 @@
           handleSubmit(){
             console.log('submit');
 
+            if (this.inputValue.length === 0) {
+              return;
+            }
+
             this.fetchImages();
           },
           fetchImages() {
-            const response = axios.get(`https://api.unsplash.com/search/photos?page=1&client_id=${this.$root.client_id}&query=${this.inputValue}`);
+            const request = axios.get(`https://api.unsplash.com/search/photos?page=1&client_id=${this.$root.client_id}&query=${this.inputValue}`);
 
-            response.then((res) => {
-              this.photos = res.data.results;
-            })
-            .catch(console.error)
+            request
+              .then((response) => {
+                this.photos = response.data.results;
+              })
+              .catch(console.error);
           }
         },
     }
