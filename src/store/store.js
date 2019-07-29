@@ -20,7 +20,7 @@ export default new Vuex.Store({
         return;
       }
 
-      const newFavouriteImages = state.favouriteImages.filter(favouriteImage => (favouriteImage !== image))
+      const newFavouriteImages = state.favouriteImages.filter(favouriteImage => (favouriteImage !== image));
       
       state.favouriteImages = newFavouriteImages;
     }
@@ -29,7 +29,7 @@ export default new Vuex.Store({
     isFavourite: (state) => (image) => {
       //find(favouriteImage => (favouriteImage === image));
 
-      return state.favouriteImages.includes(image)
+      return state.favouriteImages.includes(image);
     }
   }
 })

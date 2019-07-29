@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="home-view">
     <h1>Home</h1>
+    <RouterLink to="/search">Search</RouterLink>
     <PhotoList :photos="photos" />
   </div>
 </template>
