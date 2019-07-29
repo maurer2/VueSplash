@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="app">
     <Nav />
-    <RouterView />
+    <main class="main">
+      <RouterView />
+    </main>
   </div>
 </template>
 
@@ -48,5 +50,13 @@
         text-align: center;
         color: #2c3e50;
         width: 100%;
+    }
+
+    .main {
+      width: 100%;
+      margin: auto;
+      padding: 0 2rem;
+      max-width: 1024px;
+      overflow: hidden;
     }
 </style>

@@ -1,9 +1,8 @@
 <template lang="html">
-  <div class="photo-element" :class="{ 'photo-element--is-favourite': isFavourite }">
-    <img :src="src" :alt="alt" @click="onImgClick">
-    <button type="button" @click="onBtnClick">
-      <span class="icon">&#9733;</span>
-      <span class="text"> {{ isFavourite ? 'unlike' : 'like' }}</span>
+  <div class="photo-element">
+    <img class="image" :src="src" :alt="alt" @click="onImgClick">
+    <button class="button" :class="{ 'button--is-favourite': isFavourite }" type="button" @click="onBtnClick">
+      <span class="text">{{ isFavourite ? 'unlike' : 'like' }}</span>
     </button>
   </div>
 </template>
@@ -62,18 +61,42 @@
 <style lang="css" scoped>
     .photo-element {
         position: relative;
+        margin-bottom: 2rem;
     }
 
-    .photo-element:before {
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
         position: absolute;
-        left: 1rem;
-        bottom: 1rem;
-        font-size: 4rem;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        padding: 0;
+        appearance: none;
+        background: none;
+        border: 0;
+        box-shadow: 0;
+        outline: 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .button:before {
+        font-size: 5rem;
         content: '\2605';
         color: whitesmoke;
     }
 
-    .photo-element--is-favourite:before {
+    .button--is-favourite:before {
         color: yellow;
+    }
+
+    .text {
+        position: absolute;
+        left: -9999px;
     }
 </style>
